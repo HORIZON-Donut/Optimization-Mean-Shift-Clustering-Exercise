@@ -3,12 +3,12 @@
 echo "Start building..."
 
 CC=gcc
-CFLAGES=
+CFLAGES="-Wall -Wextra -Iinclude"
 LDFLAGES=
 
-SRCS=
-OBJS=
-TARGET=
+SRCS="src"
+OBJS="objs"
+TARGET="bin/run"
 
 mkdir -p $OBJS
 mkdir -p $(dirname $TARGET)
