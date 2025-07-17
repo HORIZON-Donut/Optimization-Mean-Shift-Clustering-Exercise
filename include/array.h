@@ -1,15 +1,13 @@
 #ifndef INCLUDE_ARRAY_H
 #define INCLUDE_ARRAY_H
 
-typedef struct Array2D
+typedef struct Array
 {
-	int row;
-	int col;
+	int length;
 
-	int** data;
-}Array2D;
+	float* data;
+}Array;
 
-int new2Darray(int row, int col, Array2D* newArr);
-int sumArray2D(Array2D* arr, int* result);
+Array* newArray(int length);
 
 #endif
