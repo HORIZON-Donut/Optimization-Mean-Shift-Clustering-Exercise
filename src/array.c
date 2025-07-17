@@ -1,4 +1,6 @@
 #include "array.h"
+
+#include <stdio.h>
 #include <stdlib.h>
 
 Array* newArray(int length)
