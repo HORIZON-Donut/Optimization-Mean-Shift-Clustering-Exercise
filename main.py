@@ -22,6 +22,8 @@ def distance(X, Y):
 	return math.sqrt((X[0] - Y[0])**2 + (X[1] - Y[1])**2)
 
 def main():
+	
+	h = 2
 	data = [
 		[1, 2],
 		[1, 5],
