@@ -47,12 +47,12 @@ def main():
 		[4, 5]
 	]
 
-	for i in range(len(data)):
-		print(F"Data {i}: X: {data[i][0]}, Y: {data[i][1]}")
-		print(F"Neighbors of {data[i]}: {neighborsFinder(data[i], data, h)}")
-		print(F"Mean shift without kernel of {data[i]}: {meanShift(data[i], neighborsFinder(data[i], data, h))}")
-		print(F"Mean shift with kernel of {data[i]}: {meanShift(data[i], neighborsFinder(data[i], data, h), True)}")
-	
+	itr1 = Iteration(data, h, True)
+	itr2 = Iteration(itr1, h, True)
+
+	print(F"Iteration 1 without kernel: {itr1}")
+	print(F"Iteration 2 without kernel: {itr2}")
+
 	return 0
 
 if __name__ == "__main__":
