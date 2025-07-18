@@ -1,7 +1,16 @@
 import math
 
-def meanShift():
-	pass
+def meanShift(data):
+	n = len(data)
+
+	resultX = 0
+	resultY = 0
+
+	for i in range(n):
+		resultX += data[n][0]
+		resultY += data[n][1]
+	
+	return resultX, resultY
 
 def main():
 	data = [
