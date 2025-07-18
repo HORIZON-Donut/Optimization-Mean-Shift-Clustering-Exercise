@@ -9,8 +9,8 @@ def main():
 		[4, 5]
 	]
 
-	print(data)
-	print(data[0] + data[1])
+	for i in range(len(data)):
+		print(F"Data {i}: X: {data[i][0]}, Y: {data[i][1]}")
 
 	return 0
 
