@@ -7,8 +7,8 @@ def meanShift(data):
 	resultY = 0
 
 	for i in range(n):
-		resultX += data[n][0]
-		resultY += data[n][1]
+		resultX += data[i][0]
+		resultY += data[i][1]
 	
 	return resultX, resultY
 
