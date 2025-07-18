@@ -3,6 +3,14 @@ import math
 def kernelFunction(X):
 	return math.exp((-1/2)/(X**2))
 
+def neighborsFinder(pos, data, h=2):
+	neighbors = []
+	for Item in data:
+		if Item[0] > (pos[0] - h) and Item[0] < (pos[0] + h) and Item[1] > (pos[1] - h) and Item[1] < (pos[1] - h):
+			neighbors.append(Item)
+	
+	return neighbors
+
 def meanShift(X, data):
 	n = len(data)
 
