@@ -1,10 +1,7 @@
 import math
 
-def kernelFunction(Xi, X):
-	x = distance(X, Xi)
-
-	power = (-1/2) * (x**2)
-	return math.exp(power)
+def kernelFunction(X):
+	return math.exp((-1/2)/(X**2))
 
 def meanShift(X, data):
 	n = len(data)
