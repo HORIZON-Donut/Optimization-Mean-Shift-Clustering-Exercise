@@ -1,5 +1,12 @@
 import math
 
+def Iteration(data, h = 2, kernelMode = False):
+	result = []
+	for i in range(len(data)):
+		result.append(meanShift(data[i], neighborsFinder(data[i], data, h), kernelMode))
+	
+	return result
+
 def kernelFunction(X):
 	return math.exp((-1/2)*(X**2))
 
