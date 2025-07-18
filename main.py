@@ -1,5 +1,12 @@
 import math
 
+def kernelFunction(num):
+	X = num[0]
+	Y = num[1]
+
+	powerX = (-1/2) * (X**2)
+	powerY = (-1/2) * (Y**2)
+
 def meanShift(X, data):
 	n = len(data)
 
