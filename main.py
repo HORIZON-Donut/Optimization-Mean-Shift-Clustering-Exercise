@@ -1,23 +1,27 @@
 import math
 
 def kernelFunction(X):
-	return math.exp((-1/2)/(X**2))
+	return math.exp((-1/2)*(X**2))
 
 def neighborsFinder(pos, data, h=2):
 	return [Xi for Xi in data if distance(Xi, pos) < h]
 
-def meanShift(X, Xi):
+def meanShift(X, Xi, useKernel = False):
 	n = len(Xi)
 
 	resultX = 0
 	resultY = 0
+	sumKernel = 0
 
 	for i in range(n):
-		resultX += Xi[i][0]
-		resultY += Xi[i][1]
+		kernel = kernelFunction(Xi[i]) if useKernel else kernelFunction(0)
+		resultX += Xi[i][0] * kernel
+		resultY += Xi[i][1] * kernel
+
+		sumKernel += kernel
 	
-	resultX = resultX/n
-	resultY = resultY/n
+	resultX = resultX/kernel
+	resultY = resultY/kernel
 	
 	return resultX - X[0], resultY - X[1]
 
