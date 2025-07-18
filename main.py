@@ -30,7 +30,8 @@ def shiftVector(X, Xi, useKernel = False):
 	resultX = resultX/sumKernel
 	resultY = resultY/sumKernel
 	
-	return resultX - X[0], resultY - X[1]
+	#return resultX - X[0], resultY - X[1]
+	return resultX, resultY
 
 def distance(X, Y):
 	return math.sqrt((X[0] - Y[0])**2 + (X[1] - Y[1])**2)
