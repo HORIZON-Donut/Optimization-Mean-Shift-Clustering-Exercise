@@ -20,8 +20,8 @@ def meanShift(X, Xi, useKernel = False):
 
 		sumKernel += kernel
 	
-	resultX = resultX/kernel
-	resultY = resultY/kernel
+	resultX = resultX/sumKernel
+	resultY = resultY/sumKernel
 	
 	return resultX - X[0], resultY - X[1]
 
