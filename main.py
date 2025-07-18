@@ -43,7 +43,8 @@ def main():
 
 	for i in range(len(data)):
 		print(F"Data {i}: X: {data[i][0]}, Y: {data[i][1]}")
-
+		print(F"Neighbors of {data[i]}: {neighborsFinder(data[i], data, h)}")
+	
 	return 0
 
 if __name__ == "__main__":
