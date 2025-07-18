@@ -1,6 +1,6 @@
 import math
 
-def meanShift(data):
+def meanShift(X, data):
 	n = len(data)
 
 	resultX = 0
@@ -10,7 +10,10 @@ def meanShift(data):
 		resultX += data[i][0]
 		resultY += data[i][1]
 	
-	return resultX, resultY
+	resultX = resultX/n
+	resultY = resultY/n
+	
+	return resultX - X[0], resultY - X[1]
 
 def main():
 	data = [
