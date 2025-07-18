@@ -6,15 +6,15 @@ def kernelFunction(X):
 def neighborsFinder(pos, data, h=2):
 	return [Xi for Xi in data if distance(Xi, pos) < h]
 
-def meanShift(X, data):
-	n = len(data)
+def meanShift(X, Xi):
+	n = len(Xi)
 
 	resultX = 0
 	resultY = 0
 
 	for i in range(n):
-		resultX += data[i][0]
-		resultY += data[i][1]
+		resultX += Xi[i][0]
+		resultY += Xi[i][1]
 	
 	resultX = resultX/n
 	resultY = resultY/n
