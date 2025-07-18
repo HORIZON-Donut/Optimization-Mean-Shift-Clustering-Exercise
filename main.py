@@ -3,7 +3,7 @@ import math
 def Iteration(data, h = 2, kernelMode = False):
 	result = []
 	for i in range(len(data)):
-		result.append(meanShift(data[i], neighborsFinder(data[i], data, h), kernelMode))
+		result.append(shiftVector(data[i], neighborsFinder(data[i], data, h), kernelMode))
 	
 	return result
 
@@ -13,7 +13,7 @@ def kernelFunction(X):
 def neighborsFinder(pos, data, h=2):
 	return [Xi for Xi in data if distance(Xi, pos) < h]
 
-def meanShift(X, Xi, useKernel = False):
+def shiftVector(X, Xi, useKernel = False):
 	n = len(Xi)
 
 	resultX = 0
