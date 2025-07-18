@@ -51,8 +51,8 @@ def main():
 	itr1 = Iteration(data, h, True)
 	itr2 = Iteration(itr1, h, True)
 
-	print(F"Iteration 1 without kernel: {itr1}")
-	print(F"Iteration 2 without kernel: {itr2}")
+	print(F"Iteration 1 with kernel: {itr1}")
+	print(F"Iteration 2 with kernel: {itr2}")
 
 	return 0
 
