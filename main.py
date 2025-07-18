@@ -14,7 +14,7 @@ def meanShift(X, Xi, useKernel = False):
 	sumKernel = 0
 
 	for i in range(n):
-		kernel = kernelFunction(Xi[i]) if useKernel else kernelFunction(0)
+		kernel = kernelFunction(distance(X, Xi[i])) if useKernel else kernelFunction(0)
 		resultX += Xi[i][0] * kernel
 		resultY += Xi[i][1] * kernel
 
