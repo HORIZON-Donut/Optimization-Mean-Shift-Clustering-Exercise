@@ -15,6 +15,9 @@ def meanShift(X, data):
 	
 	return resultX - X[0], resultY - X[1]
 
+def distance(X, Y):
+	return math.sprt((X[0] - Y[0])**2 + (X[1] - Y[1])**2)
+
 def main():
 	data = [
 		[1, 2],
