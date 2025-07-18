@@ -3,11 +3,6 @@ import math
 def meanShift():
 	pass
 
-def distane(X, Y):
-	dis = X**2 + Y**2
-
-	return dis
-
 def main():
 	data = [
 		[1, 2],
