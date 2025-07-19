@@ -47,11 +47,19 @@ def main():
 		[4, 5]
 	]
 
-	itr1 = Iteration(data, h, True)
-	itr2 = Iteration(itr1, h, True)
+	itr1 = Iteration(data, h, False)
+	itr2 = Iteration(itr1, h, False)
 
-	print(F"Iteration 1 with kernel: {itr1}")
-	print(F"Iteration 2 with kernel: {itr2}")
+	print(F"Iteration 1 without kernel: {itr1}")
+	print(F"Iteration 2 without kernel: {itr2}")
+
+	print("---------------------------------")
+
+	itr3 = Iteration(data, h, True)
+	itr4 = Iteration(itr1, h, True)
+
+	print(F"Iteration 1 with kernel: {itr3}")
+	print(F"Iteration 2 with kernel: {itr4}")
 
 	return 0
 
